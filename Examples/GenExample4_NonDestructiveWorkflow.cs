@@ -25,13 +25,13 @@ namespace AnimatorAsCodeFramework.Examples
 
         public override void OnInspectorGUI()
         {
-            AacExample.InspectorTemplate(this, serializedObject, "assetKey", Create, Remove);
+            AacExample.InspectorTemplate(this, serializedObject, "assetKey", Create);
         }
 
         private void Create()
         {
             my = (GenExample4_NonDestructiveWorkflow) target;
-            aac = AacExample.AnimatorAsCode(SystemName, my.avatar, my.assetContainer, my.assetKey);
+            aac = AacExample.AnimatorAsCode(SystemName, my.avatar.gameObject, my.assetContainer, my.assetKey);
 
             CreateMainLayer();
         }
@@ -40,7 +40,7 @@ namespace AnimatorAsCodeFramework.Examples
         {
             // AacExample.AnimatorAsCode invokes ClearPreviousAssets.
             // This will cause the generated controller to be removed.
-            AacExample.AnimatorAsCode(SystemName, my.avatar, my.assetContainer, my.assetKey); 
+            AacExample.AnimatorAsCode(SystemName, my.avatar.gameObject, my.assetContainer, my.assetKey); 
         }
 
         private void CreateMainLayer()

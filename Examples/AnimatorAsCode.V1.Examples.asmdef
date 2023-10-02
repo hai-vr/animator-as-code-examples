@@ -1,7 +1,10 @@
 {
     "name": "AnimatorAsCode.V1.Examples",
     "references": [
-        "AnimatorAsCode.V1"
+        "AnimatorAsCode.V1",
+        "AnimatorAsCode.V1.VRChat",
+        "AnimatorAsCode.V1.VRChatDestructiveWorkflow",
+        "ModularAvatarAsCode.V1"
     ],
     "includePlatforms": [
         "Editor"
@@ -9,7 +12,10 @@
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [],
+    "precompiledReferences": [
+        "VRCSDKBase.dll",
+        "VRCSDK3A.dll"
+    ],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
